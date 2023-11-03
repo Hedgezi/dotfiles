@@ -269,6 +269,11 @@ mode "$mode_gaps_left" {
         bindsym Escape mode "default"
 }
 
+# Screenshots
+bindsym --release Print exec import -window root "/home/esketitpunk/Pictures/$(date "+%Y-%m-%d-%H-%M-%s")"
+bindsym --release Shift+Print exec import "/home/esketitpunk/Pictures/$(date "+%Y-%m-%d-%H-%M-%s")"
+
+
 # Borders and window title
 #for_window [all] title_window_icon yes
 #for_window [all] border pixel 6
