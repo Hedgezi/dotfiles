@@ -270,8 +270,8 @@ mode "$mode_gaps_left" {
 }
 
 # Screenshots
-bindsym --release Print exec import -window root "/home/esketitpunk/Pictures/$(date "+%Y-%m-%d-%H-%M-%s")"
-bindsym --release Shift+Print exec import "/home/esketitpunk/Pictures/$(date "+%Y-%m-%d-%H-%M-%s")"
+bindsym --release Print exec import -window root "/home/esketitpunk/Pictures/$(date "+%Y-%m-%d-%H-%M-%s").png"
+bindsym --release Shift+Print exec import "/home/esketitpunk/Pictures/$(date "+%Y-%m-%d-%H-%M-%s").png"
 
 
 # Borders and window title

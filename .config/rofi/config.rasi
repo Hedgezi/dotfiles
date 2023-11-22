@@ -1,0 +1,7 @@
+configuration {
+ modi: "drun,combi";
+ combi-modi: "drun,ssh,window";
+ icon-theme: "McMojave-circle-dark";
+}
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+@theme "/home/esketitpunk/.local/share/rofi/themes/spotlight-dark.rasi"
