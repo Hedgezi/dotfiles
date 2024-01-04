@@ -2,6 +2,7 @@ configuration {
  modi: "drun,combi";
  combi-modi: "drun,ssh,window";
  icon-theme: "McMojave-circle-dark";
+ font: "Open Sans 14";
 }
-//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+
 @theme "/home/esketitpunk/.local/share/rofi/themes/spotlight-dark.rasi"
