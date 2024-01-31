@@ -19,7 +19,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons
 
 # Keyboard layouts
-exec "setxkbmap -layout us,ru -option 'grp:win_space_toggle'"
+exec_always "setxkbmap -layout us,ru -option 'grp:win_space_toggle'"
 
 # change focus
 bindsym $mod+j focus left
@@ -252,8 +252,8 @@ mode "$mode_gaps_left" {
 # Function keys
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +4%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -4%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5 #to increase 5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5 #to decrease 5% 
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
@@ -278,6 +278,9 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --format=png --select | xclip
 #smart_borders on
 for_window [all] gaps inner all set 5 
 
+# Depression
+exec xrandr --output HDMI-0 --primary --auto --output eDP1 --auto --right-of HDMI-0
+
 # Locker
 exec_always xss-lock -- i3lock
 
@@ -299,6 +302,17 @@ exec_always --no-startup-id "nitrogen --restore"
 
 # Poly
 exec_always polybar
+
+# Two monitors
+workspace 1 output HDMI-0
+workspace 2 output HDMI-0
+workspace 3 output HDMI-0
+workspace 4 output HDMI-0
+workspace 5 output HDMI-0
+workspace 6 output HDMI-0
+workspace 7 output eDP1
+workspace 8 output eDP1
+workspace 9 output eDP1
 
 # Borders
 default_border pixel 0
