@@ -19,7 +19,7 @@ else
     elif [ "$STATUS" = "Paused"  ]; then
         playerctl metadata --format "$FORMAT"
     elif [ "$STATUS" = "No player is running"  ]; then
-        echo "$STATUS"
+        echo "No player"
     else
         playerctl metadata --format "$FORMAT"
     fi
