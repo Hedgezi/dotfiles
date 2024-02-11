@@ -319,4 +319,5 @@ default_border pixel 0
 #for_window [all] border pixel 6
 
 # Window-specified workspaces
-#for_window [class="jetbrains-phpstorm"] move to workspace $ws2
+for_window [class="jetbrains-phpstorm"] move to workspace 2
+for_window [class="Code"] move to workspace 2
