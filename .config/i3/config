@@ -301,7 +301,7 @@ exec_always --no-startup-id "nitrogen --restore"
 #exec_always --no-startup-id wal -R
 
 # Poly
-exec_always polybar
+exec polybar
 
 # Two monitors
 workspace 1 output HDMI-0
@@ -321,3 +321,6 @@ default_border pixel 0
 # Window-specified workspaces
 for_window [class="jetbrains-phpstorm"] move to workspace 2
 for_window [class="Code"] move to workspace 2
+for_window [class="Slack"] move to workspace 4
+for_window [class="vesktop"] move to workspace 8
+for_window [class="Spotify"] move to workspace 9
