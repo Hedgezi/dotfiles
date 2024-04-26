@@ -48,7 +48,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -120,7 +120,7 @@ export NNN_OPTS="eH" # if you prefer to have all the options at the same place
 export LC_COLLATE="C" # hidden files on top
 export NNN_FIFO="/tmp/nnn.fifo" # temporary buffer for the previews
 #export NNN_FCOLORS="AAAAE631BBBBCCCCDDDD9999" # feel free to change the colors
-export NNN_PLUG='p:preview-tui' # many other plugins are available here: https://github.com/jarun/nnn/tree/master/plugins
+export NNN_PLUG='p:preview-tui;d:dragdrop' # many other plugins are available here: https://github.com/jarun/nnn/tree/master/plugins
 export SPLIT='v' # to split Kitty vertically
 
 EDITOR="nvim"
