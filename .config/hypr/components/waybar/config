@@ -17,15 +17,17 @@
     },
 
     "clock": {
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%Y-%m-%d %H:%M:%s}"
     },
 
     "cpu": {
-        "format": "{usage}% "
+        "format": "{usage}% ",
+	"interval": 2
     },
 
     "memory": {
-        "format": "{}% "
+        "format": "{}% ",
+	"interval": 2
     },
 
     "battery": {
