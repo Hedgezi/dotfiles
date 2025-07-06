@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:Open Sans Regular 8
+font pango:Noto Sans 8
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -12,6 +12,8 @@ floating_modifier $mod
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
+
+## SWAY
 
 ## DEFAULT KEYBINDS
 
@@ -113,10 +115,10 @@ bindcode $mod+Shift+19 move container to workspace number $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+# restart sway inplace (preserves your layout/session, can be used to upgrade sway)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# exit (logs you out)
+bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your X session.' -b 'Yes, exit sway' 'swaymsg exit'
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -149,8 +151,8 @@ bindsym $mod+r mode "resize"
 # Function keys
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
@@ -159,8 +161,6 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym XF86AudioRewind exec --no-startup-id playerctl position 10-
 bindsym XF86AudioForward exec --no-startup-id playerctl position 10+
-
-## KEYBINDS
 
 # Screenshots in files
 
